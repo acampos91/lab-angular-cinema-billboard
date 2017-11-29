@@ -1,3 +1,10 @@
 <p>
   my-home-component works!
 </p>
+<div *ngFor = "let e of listMovies" class="movies">
+  <h1>Room: {{e.room}}</h1>
+  <img src="{{e.poster}}" alt="">
+  <h3>{{e.title}}</h3>
+  <button [routerLink]="['..','movie',e.id]">View details</button>
+
+</div>

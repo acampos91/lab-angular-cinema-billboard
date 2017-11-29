@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from '../services.service'
 
 @Component({
   selector: 'app-my-home-component',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-home-component.component.css']
 })
 export class MyHomeComponentComponent implements OnInit {
-
-  constructor() { }
+  listMovies : Array<any>
+  constructor(public Servicio : ServicesService) { }
 
   ngOnInit() {
+   this.listMovies = this.Servicio.getMovies();
   }
 
 }
