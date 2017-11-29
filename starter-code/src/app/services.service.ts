@@ -131,6 +131,6 @@ export class ServicesService {
     return this.movieList
   }
   getMovie(id){
-    return this.movieList.filter(e => e.id == id)
+    return this.movieList.filter(e => e.id == id)[0]
   }
 }
